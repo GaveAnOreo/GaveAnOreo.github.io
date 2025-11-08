@@ -1696,8 +1696,12 @@ body[data-theme="dark"] .footer-links a {
 
     .nav-actions {
         order: 3;
-        width: 100%;
+        flex: 1 1 auto;
         justify-content: flex-start;
+    }
+
+    .theme-toggle {
+        margin-left: 0;
     }
 
     .nav-links {
@@ -1907,9 +1911,14 @@ body[data-theme="dark"] .footer-links a {
         text-align: left;
     }
 
+    .nav-actions {
+        width: auto;
+    }
+
     .theme-toggle {
-        width: 100%;
+        width: auto;
         justify-content: center;
+        min-width: auto;
     }
 
     .hero-actions {
