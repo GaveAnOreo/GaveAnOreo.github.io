@@ -1695,14 +1695,12 @@ body[data-theme="dark"] .footer-links a {
     }
 
     .nav-actions {
-        order: 3;
-        flex: 1 1 auto;
-        justify-content: flex-end;
-        gap: 0.75rem;
+        order: 2;
+        margin-left: auto;
     }
 
     .theme-toggle {
-        margin-left: 0;
+        margin-left: 0.75rem;
         margin-right: 0;
     }
 
@@ -1723,6 +1721,8 @@ body[data-theme="dark"] .footer-links a {
         z-index: 120;
         max-height: calc(100vh - 120px);
         overflow-y: auto;
+        order: 3;
+        width: 100%;
     }
 
     body[data-theme="dark"] .nav-links {
