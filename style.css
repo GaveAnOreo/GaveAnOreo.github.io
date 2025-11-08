@@ -1687,7 +1687,6 @@ body[data-theme="dark"] .footer-links a {
     .nav-toggle {
         display: inline-flex;
         order: 2;
-        margin-left: auto;
     }
 
     .logo {
