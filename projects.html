@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Benedict Orio" />
+    <meta name="description" content="Explore Benedict Orio’s curated project previews and upcoming case studies." />
+    <meta name="theme-color" content="#0d1f4d" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Benedict Orio | Projects" />
+    <meta property="og:description" content="Follow Benedict Orio’s BSIT prototypes as they evolve into portfolio-ready case studies." />
+    <meta property="og:url" content="https://gaveanoreo.github.io/GITHUBPAGE/projects.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Benedict Orio | Projects" />
+    <meta name="twitter:description" content="Follow Benedict Orio’s BSIT prototypes as they evolve into portfolio-ready case studies." />
+    <title>Benedict Orio | Projects</title>
+    <link rel="stylesheet" href="projects.css" />
+    <script defer src="script.js"></script>
+</head>
+
+<body id="top">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <nav class="navbar" aria-label="Primary Navigation">
+            <div class="logo">Benedict<span>Orio</span></div>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light or dark theme">
+                    <span class="theme-toggle__icon" aria-hidden="true"></span>
+                    <span class="theme-toggle__label">Light</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="hero projects-hero" aria-labelledby="projects-hero-heading" tabindex="-1">
+            <div class="hero-wrapper">
+                <p class="eyebrow">3rd year BSIT builds in motion</p>
+                <h1 id="projects-hero-heading">Documenting coursework prototypes into polished case studies.</h1>
+                <p class="lead">Kyoto and Xiaomi&nbsp;15T&nbsp;Pro are my current flagship projects—both live on GitHub Pages and backed by detailed notes while I prepare the full write-ups.</p>
+                <div class="hero-actions">
+                    <a href="https://github.com/GaveAnOreo?tab=repositories" class="btn ghost-btn" target="_blank" rel="noopener">See GitHub repositories</a>
+                    <a href="contact.html" class="btn secondary-btn">Request a walkthrough</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" aria-labelledby="projects-heading">
+            <div class="section-heading">
+                <h2 id="projects-heading">Project showcase</h2>
+                <p class="section-tagline">Case studies are in the lab—filter the grid to follow along with each build.</p>
+            </div>
+            <div class="project-controls" role="group" aria-label="Filter projects" data-project-controls>
+                <p class="project-caption">Pick a filter to explore the live Kyoto and Xiaomi&nbsp;15T&nbsp;Pro launches while I finalize their case studies.</p>
+                <div class="project-filters">
+                    <button type="button" class="pill is-active" data-project-filter="featured">Featured</button>
+                    <button type="button" class="pill" data-project-filter="recent">Recently updated</button>
+                    <button type="button" class="pill" data-project-filter="all">All previews</button>
+                </div>
+            </div>
+            <p class="project-helper">Both projects link straight to their GitHub repositories and live deployments so you can review the source while I polish the storytelling.</p>
+            <div class="project-grid" data-project-list></div>
+            <p class="project-empty" data-project-empty hidden>More case studies are in the queue—check back after each sprint for new write-ups.</p>
+            <p class="project-error" data-project-error hidden role="alert">This page focuses on upcoming work, so live GitHub data stays behind the scenes. Visit my <a href="https://github.com/GaveAnOreo" target="_blank" rel="noopener">profile</a> for current repositories.</p>
+        </section>
+
+        <section class="project-roadmap" aria-labelledby="roadmap-heading">
+            <div class="section-heading">
+                <h2 id="roadmap-heading">Roadmap teasers</h2>
+                <p class="section-tagline">Notes from the builds currently on the whiteboard.</p>
+            </div>
+            <div class="roadmap-grid">
+                <article class="info-card">
+                    <span class="badge badge--progress">Outline in progress</span>
+                    <h3>Kyoto travel case study</h3>
+                    <p>Packaging itinerary planning insights, accessibility checks, and responsive refinements into a shareable story.</p>
+                    <ul class="tag-list">
+                        <li>UX storytelling</li>
+                        <li>Responsive design</li>
+                    </ul>
+                </article>
+                <article class="info-card">
+                    <span class="badge badge--discovery">Research phase</span>
+                    <h3>Xiaomi 15T Pro breakdown</h3>
+                    <p>Documenting how I translated spec sheets into a product launch narrative with scroll-triggered highlights.</p>
+                    <ul class="tag-list">
+                        <li>Product copy</li>
+                        <li>Interaction design</li>
+                    </ul>
+                </article>
+                <article class="info-card">
+                    <span class="badge badge--planning">Component audit</span>
+                    <h3>Portfolio component library</h3>
+                    <p>Design tokens, accessible components, and usage guidelines powering future class and freelance work.</p>
+                    <ul class="tag-list">
+                        <li>Design systems</li>
+                        <li>Documentation</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="project-journal" aria-labelledby="journal-heading">
+            <div class="section-heading">
+                <h2 id="journal-heading">How I’m leveling up each build</h2>
+                <p class="section-tagline">Process notes that keep these student projects grounded and internship-ready.</p>
+            </div>
+            <div class="journal-grid">
+                <article class="info-card">
+                    <h3>Discovery checklist</h3>
+                    <ul class="check-list">
+                        <li>Frame the problem, user, and success metric before touching code.</li>
+                        <li>Prototype core flows, then gather peer testing notes from classmates.</li>
+                        <li>Capture next-iteration ideas so mentors can see how I’d scale the build.</li>
+                    </ul>
+                </article>
+                <article class="info-card">
+                    <h3>Artifacts I’m capturing</h3>
+                    <p>Each case study ships with a handful of student-friendly assets:</p>
+                    <ul class="tag-list">
+                        <li>Code walkthroughs</li>
+                        <li>Design rationale</li>
+                        <li>Testing highlights</li>
+                        <li>Retrospective notes</li>
+                    </ul>
+                </article>
+                <article class="info-card">
+                    <h3>Where I’d love support</h3>
+                    <p>Feedback helps me grow faster—especially from mentors and fellow students.</p>
+                    <ul class="tag-list">
+                        <li>Code reviews</li>
+                        <li>UX critiques</li>
+                        <li>Internship briefs</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta-banner" aria-labelledby="projects-cta-heading">
+            <div class="cta-banner__content">
+                <h2 id="projects-cta-heading">Want an early preview?</h2>
+                <p>Tell me what kind of case study would help you most and I’ll share drafts once they’re ready.</p>
+            </div>
+            <a class="btn primary-btn" href="contact.html">Request access</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-meta">
+                <p>© <span id="year"></span> Benedict Orio — Always building.</p>
+                <p class="footer-tagline">Follow the roadmap for fresh case studies and prototypes.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="activities.html">Activities</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="#top" class="back-to-top">Back to top</a>
+        </div>
+    </footer>
+</body>
+
+</html>

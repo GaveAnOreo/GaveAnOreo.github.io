@@ -1,0 +1,48 @@
+@import url('./style.css');
+
+main {
+    gap: 4.5rem;
+}
+
+.about-hero .hero-wrapper {
+    max-width: 640px;
+}
+
+.about-story .section-heading {
+    text-align: left;
+    align-items: flex-start;
+    justify-items: flex-start;
+}
+
+.about-story .section-heading h2 {
+    max-width: 28ch;
+}
+
+.timeline-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.cta-banner {
+    align-items: center;
+}
+
+.about-academics {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.academic-grid {
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.about-academics .info-card {
+    height: 100%;
+}
+
+@media (max-width: 720px) {
+    .academic-grid {
+        grid-template-columns: 1fr;
+    }
+}

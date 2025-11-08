@@ -1,0 +1,89 @@
+@import url('./style.css');
+
+main {
+    gap: 4.5rem;
+}
+
+.contact-hero .hero-wrapper {
+    max-width: 680px;
+}
+
+.contact .contact-card {
+    margin: 0 auto;
+}
+
+.contact-insights {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.contact-insights__grid {
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.contact-insights .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.contact-faq {
+    display: grid;
+    gap: 2rem;
+}
+
+.faq-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.faq-list details {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.1rem 1.35rem;
+    color: var(--text-secondary);
+    box-shadow: var(--shadow);
+}
+
+.faq-list summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-primary);
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.faq-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-list summary::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: var(--accent);
+    transition: transform 0.2s ease;
+}
+
+.faq-list details[open] {
+    border-color: var(--accent-ring);
+}
+
+.faq-list details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-list details p {
+    margin-top: 0.75rem;
+}
+
+@media (max-width: 720px) {
+    .contact-insights__grid {
+        grid-template-columns: 1fr;
+    }
+}
