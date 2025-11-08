@@ -19,13 +19,17 @@
     <script defer src="script.js"></script>
 </head>
 
-<body id="top">
+<body id="top" class="no-js">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header>
         <nav class="navbar" aria-label="Primary Navigation">
             <div class="logo">Benedict<span>Orio</span></div>
-            <ul class="nav-links">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="nav-toggle__icon" aria-hidden="true"><span></span></span>
+                <span class="nav-toggle__label">Menu</span>
+            </button>
+            <ul class="nav-links" id="primary-navigation">
                 <li><a href="about.html">About</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="activities.html" class="active" aria-current="page">Activities</a></li>

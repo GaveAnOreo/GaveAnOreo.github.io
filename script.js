@@ -1,4 +1,10 @@
 const navLinks = document.querySelectorAll('.nav-links a');
+const navMenu = document.getElementById('primary-navigation');
+const navToggle = document.querySelector('.nav-toggle');
+
+if (document.body.classList.contains('no-js')) {
+    document.body.classList.remove('no-js');
+}
 const siteHeader = document.querySelector('header');
 const themeToggle = document.querySelector('.theme-toggle');
 const themeToggleLabel = themeToggle?.querySelector('.theme-toggle__label');
@@ -165,6 +171,76 @@ const markActiveNavLink = () => {
 };
 
 markActiveNavLink();
+
+const closeMobileNav = ({ focusToggle = false } = {}) => {
+    if (!navMenu || !navToggle) {
+        return;
+    }
+    navMenu.classList.remove('is-open');
+    navToggle.classList.remove('is-active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    if (window.innerWidth <= 720) {
+        navMenu.hidden = true;
+    } else {
+        navMenu.hidden = false;
+    }
+    document.body.classList.remove('nav-open');
+    if (focusToggle) {
+        navToggle.focus();
+    }
+};
+
+if (navToggle && navMenu) {
+    navMenu.hidden = window.innerWidth <= 720;
+
+    navToggle.addEventListener('click', event => {
+        event.stopPropagation();
+        const isOpen = navMenu.classList.contains('is-open');
+        if (isOpen) {
+            closeMobileNav();
+            return;
+        }
+        navMenu.hidden = false;
+        navMenu.classList.add('is-open');
+        navToggle.classList.add('is-active');
+        navToggle.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('nav-open');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 720) {
+                closeMobileNav();
+            }
+        });
+    });
+
+    document.addEventListener('click', event => {
+        if (!navMenu.classList.contains('is-open')) {
+            return;
+        }
+        if (navMenu.contains(event.target) || navToggle.contains(event.target)) {
+            return;
+        }
+        closeMobileNav();
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 720 && navMenu.classList.contains('is-open')) {
+            closeMobileNav();
+        } else if (navMenu && window.innerWidth > 720) {
+            navMenu.hidden = false;
+        } else if (navMenu && window.innerWidth <= 720 && !navMenu.classList.contains('is-open')) {
+            navMenu.hidden = true;
+        }
+    });
+
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && navMenu.classList.contains('is-open')) {
+            closeMobileNav({ focusToggle: true });
+        }
+    });
+}
 
 const toggleProjectControls = hasProjects => {
     if (!projectControlsEl) {
