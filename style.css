@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
-/* Version: 2024-11-08 - Footer and mobile responsive updates */
-
 :root {
     --background: #f5f6fb;
     --background-alt: #dfe5f7;
@@ -30,6 +28,11 @@
     --pill-border: rgba(13, 31, 77, 0.28);
     --pill-active: rgba(13, 31, 77, 0.18);
     --timeline-line: rgba(13, 31, 77, 0.2);
+    --container-max: 1080px;
+    --container-wide: 1180px;
+    --container-padding: clamp(1.2rem, 4vw, 2rem);
+    --section-spacing: clamp(3.1rem, 7vw, 5.2rem);
+    --card-padding: clamp(1.6rem, 3vw, 2.2rem);
     color-scheme: light dark;
 }
 
@@ -509,7 +512,7 @@ main > section:last-of-type::after {
     border: 1px solid var(--border);
     border-radius: 24px;
     box-shadow: 0 4px 24px -8px rgba(13, 31, 77, 0.12), 0 12px 48px -16px rgba(13, 31, 77, 0.18);
-    padding: 3.25rem;
+    padding: clamp(2.35rem, 5vw, 3.35rem);
     backdrop-filter: saturate(120%);
     transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
@@ -526,7 +529,7 @@ body[data-theme="dark"] .hero {
 
 .hero-wrapper {
     display: grid;
-    gap: 1.35rem;
+    gap: clamp(1.05rem, 3.5vw, 1.5rem);
     max-width: 760px;
     margin: 0 auto;
     justify-items: center;
@@ -570,7 +573,7 @@ body[data-theme="dark"] .hero::before {
 }
 
 .hero h1 {
-    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 600;
     text-wrap: balance;
     line-height: 1.18;
@@ -580,8 +583,8 @@ body[data-theme="dark"] .hero::before {
 }
 
 .lead {
-    font-size: 1.08rem;
-    line-height: 1.82;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    line-height: 1.78;
     color: var(--text-secondary);
     margin-top: 0.5rem;
 }
@@ -589,7 +592,7 @@ body[data-theme="dark"] .hero::before {
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.95rem;
+    gap: clamp(0.65rem, 2vw, 1rem);
     margin-top: 0.75rem;
     justify-content: center;
 }
@@ -673,7 +676,7 @@ body[data-theme="dark"] .ghost-btn {
     list-style: none;
     margin-top: 1.9rem;
     display: grid;
-    gap: 1.05rem;
+    gap: clamp(0.85rem, 2.8vw, 1.05rem);
     padding-left: 0;
     color: var(--text-secondary);
     font-size: 1rem;
@@ -706,7 +709,7 @@ body[data-theme="dark"] .hero-points li::before {
 .hero-stats {
     margin-top: 2.1rem;
     display: grid;
-    gap: 1.35rem;
+    gap: clamp(1.05rem, 3vw, 1.45rem);
     list-style: none;
     padding: 0;
     justify-items: center;
@@ -724,7 +727,7 @@ body[data-theme="dark"] .hero-points li::before {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 20px;
-    padding: 1.75rem 1.85rem;
+    padding: clamp(1.45rem, 2.8vw, 1.85rem) clamp(1.5rem, 3vw, 1.95rem);
     box-shadow: 0 2px 14px -6px rgba(13, 31, 77, 0.12), 0 8px 28px -10px rgba(13, 31, 77, 0.16);
     transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
@@ -845,7 +848,7 @@ body[data-theme="dark"] .hero-status {
     background: linear-gradient(165deg, rgba(16, 48, 106, 0.12), rgba(8, 21, 54, 0.06) 55%, rgba(255, 255, 255, 0.08) 95%), var(--surface);
     border: 1px solid rgba(16, 48, 106, 0.18);
     border-radius: 20px;
-    padding: 2rem;
+    padding: var(--card-padding);
     box-shadow: 0 2px 16px -6px rgba(13, 31, 77, 0.14), 0 8px 32px -12px rgba(13, 31, 77, 0.18);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     display: grid;
@@ -1434,7 +1437,7 @@ body[data-theme="dark"] .project-error {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 24px;
-    padding: 3.25rem 3rem;
+    padding: clamp(2.4rem, 6vw, 3.25rem) clamp(1.75rem, 5vw, 2.8rem);
     display: grid;
     gap: 1.25rem;
     text-align: center;
@@ -1470,9 +1473,9 @@ body[data-theme="dark"] .contact-card {
 
 .contact-extra {
     display: grid;
-    gap: 0.5rem;
+    gap: clamp(0.45rem, 1.5vw, 0.65rem);
     margin: 0.75rem 0 1.25rem;
-    padding: 1.25rem 1.5rem;
+    padding: clamp(0.95rem, 2.5vw, 1.25rem) clamp(1.15rem, 3vw, 1.5rem);
     background: var(--surface-muted);
     border-radius: 16px;
     border: 1px solid var(--border);
@@ -1529,7 +1532,7 @@ footer {
     background: var(--surface);
     transition: background 0.4s ease, border-color 0.4s ease;
     margin-top: var(--section-spacing);
-    padding: clamp(2.1rem, 5vw, 2.9rem) 0;
+    padding: clamp(2.1rem, 5vw, 2.9rem) var(--container-padding);
     box-shadow: 0 -2px 16px -8px rgba(13, 31, 77, 0.08);
 }
 
@@ -1541,13 +1544,13 @@ body[data-theme="dark"] footer {
 .footer-content {
     width: min(var(--container-max), 100%);
     margin: 0 auto;
-    padding: 0 var(--container-padding);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     font-size: 0.94rem;
     color: var(--text-tertiary);
+    flex-wrap: wrap;
 }
 
 body[data-theme="dark"] .footer-content {
@@ -1558,6 +1561,7 @@ body[data-theme="dark"] .footer-content {
     display: grid;
     gap: 0.35rem;
     max-width: 320px;
+    flex: 1 1 auto;
 }
 
 .footer-tagline {
@@ -1570,6 +1574,7 @@ body[data-theme="dark"] .footer-content {
     flex-wrap: wrap;
     gap: 0.65rem;
     font-size: 0.88rem;
+    align-items: center;
 }
 
 .footer-links a {
@@ -1590,6 +1595,7 @@ body[data-theme="dark"] .footer-links a {
     color: var(--accent);
     text-decoration: none;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .back-to-top:hover {
@@ -1862,10 +1868,23 @@ body[data-theme="dark"] .footer-links a {
     .footer-content {
         flex-direction: column;
         text-align: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .footer-meta {
+        max-width: 100%;
+        text-align: center;
     }
 
     .footer-links {
         justify-content: center;
+        width: 100%;
+    }
+
+    .back-to-top {
+        width: 100%;
+        text-align: center;
     }
 }
 
