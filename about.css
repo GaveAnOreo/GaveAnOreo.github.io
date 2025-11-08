@@ -2,6 +2,7 @@
 
 main {
     gap: 4.5rem;
+    padding-bottom: clamp(4rem, 8vw, 6rem);
 }
 
 .about-hero .hero-wrapper {
