@@ -37,11 +37,12 @@ main {
     box-shadow: var(--shadow-strong);
 }
 
-.activity-header {
+.activities-grid .activity-header {
+    /* keep badge and title together on one line where possible */
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* prevent badge from wrapping after links */
 }
 
 /* Make the title flexible so it can shrink and wrap inside the card */
@@ -60,21 +61,24 @@ main {
     overflow: hidden;
 }
 
-.badge {
+.activities-grid .activity-header .badge {
     max-width: 120px;
-    /* allow the badge text to wrap inside the pill so it never overflows */
-    white-space: normal;
-    word-break: break-word;
-    overflow: visible;
-    display: inline-block;
-    padding: 0.3em 0.65em;
-    font-size: 0.95em;
-    border-radius: 999px;
+    /* ensure badge appears inline with title and doesn't get moved by global rules */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.25em 0.6em;
+    font-size: 0.9rem;
+    border-radius: 8px;
     background: var(--pill-bg, #eef2fb);
     border: 1px solid var(--pill-border, #dfe5f7);
     color: var(--accent, #0d1f4d);
-    font-weight: 600;
+    font-weight: 700;
     box-sizing: border-box;
+    text-transform: none; /* override global uppercase */
     flex: 0 0 auto; /* keep badge size independent from the title */
 }
 
@@ -173,10 +177,11 @@ main {
 
 /* On small screens stack badge above title for clarity */
 @media (max-width: 520px) {
-    .activity-header {
+    .activities-grid .activity-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.35rem;
+        flex-wrap: wrap; /* allow stacking on small screens */
     }
 
     .badge {
