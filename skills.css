@@ -22,7 +22,7 @@ main {
     padding: var(--card-padding);
     background: var(--surface);
     border: 1px solid var(--surface-muted);
-    border-radius: 10px; /* match site semi-rounded corners */
+    border-radius: 10px;
     box-shadow: var(--shadow);
     transition: transform 180ms ease, box-shadow 180ms ease;
 }
@@ -45,7 +45,7 @@ main {
     gap: 0.4rem;
     padding: 1rem 1.15rem;
     border: 1px solid var(--border);
-    border-radius: 10px; /* semi-rounded to match other cards */
+    border-radius: 10px;
     background: var(--surface);
     min-height: 84px;
     align-content: start;

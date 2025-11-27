@@ -19,6 +19,20 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.activities-grid {
+    /* Keep action buttons side-by-side where space allows (two-column layout)
+       and only stack on very narrow screens. */
+    .activity-links {
+        gap: 0.5rem;
+        align-items: center;
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    align-items: stretch;
+}
+
 .activities-grid .info-card {
     display: flex;
     flex-direction: column;
@@ -29,7 +43,56 @@ main {
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: transform 180ms ease, box-shadow 180ms ease;
-    min-height: 220px;
+    /* allow cards to grow naturally so long descriptions are fully visible */
+    min-height: auto;
+    overflow: visible;
+    /* allow equal-height columns in the grid while content can still expand */
+    flex: 1 1 auto;
+}
+
+.activities-grid .info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-strong);
+}
+
+@import url('./style.css');
+
+main {
+    gap: 4rem;
+}
+
+.activities-hero .hero-wrapper {
+    max-width: 640px;
+}
+
+.activities {
+    display: grid;
+    gap: 2.75rem;
+}
+
+.activities-grid {
+    display: grid;
+    gap: 1.85rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.activities-grid {
+    align-items: stretch;
+}
+
+.activities-grid .info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: var(--card-padding);
+    background: var(--surface);
+    border: 1px solid var(--surface-muted);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    min-height: auto;
+    overflow: visible;
+    flex: 1 1 auto;
 }
 
 .activities-grid .info-card:hover {
@@ -38,32 +101,31 @@ main {
 }
 
 .activities-grid .activity-header {
-    /* keep badge and title together on one line where possible */
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    flex-wrap: nowrap; /* prevent badge from wrapping after links */
+    flex-wrap: nowrap;
 }
 
-/* Make the title flexible so it can shrink and wrap inside the card */
 .activity-header h3 {
     font-size: 1.35rem;
-    margin: 0; /* ensure no extra top/bottom spacing */
-    flex: 1 1 auto; /* allow the title to grow/shrink */
-    min-width: 0; /* essential for flex children to truncate correctly */
+    margin: 0;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
-/* limit title to two lines with graceful truncation on wider screens */
 .activity-header h3 {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .activities-grid .activity-header .badge {
     max-width: 120px;
-    /* ensure badge appears inline with title and doesn't get moved by global rules */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -78,18 +140,17 @@ main {
     color: var(--accent, #0d1f4d);
     font-weight: 700;
     box-sizing: border-box;
-    text-transform: none; /* override global uppercase */
-    flex: 0 0 auto; /* keep badge size independent from the title */
+    text-transform: none;
+    flex: 0 0 auto;
 }
 
-/* Small-screen adjustments: stack badge above title when necessary and reduce sizes */
 @media (max-width: 520px) {
     .activity-header {
         align-items: flex-start;
     }
 
     .badge {
-        max-width: 140px; /* allow slightly wider badge on narrow screens so it can wrap if needed */
+        max-width: 140px;
         font-size: 0.88em;
         padding: 0.2em 0.5em;
     }
@@ -97,6 +158,37 @@ main {
     .activity-header h3 {
         font-size: 1.1rem;
         width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    .activity-header h3 {
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+        display: block;
+        overflow: visible;
+    }
+
+    .activity-links {
+        gap: 0.5rem;
+        align-items: center;
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .activity-links .btn {
+        flex: 1 1 48%;
+        min-width: 140px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 420px) {
+    .activity-links .btn {
+        flex: 1 1 100%;
+        min-width: 0;
     }
 }
 
@@ -108,7 +200,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
-    margin-top: auto; /* push links to the bottom of the card */
+    margin-top: auto;
 }
 
 .tag-list {
@@ -126,7 +218,6 @@ main {
     background: transparent;
 }
 
-/* Button / link improvements */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -159,7 +250,6 @@ main {
     outline-offset: 2px;
 }
 
-/* Badge styling refinement */
 .badge {
     display: inline-flex;
     align-items: center;
@@ -167,7 +257,7 @@ main {
     min-width: 56px;
     padding: 0.25em 0.6em;
     font-size: 0.9em;
-    border-radius: 8px; /* semi-rounded to match site design */
+    border-radius: 8px;
     background: var(--pill-bg, rgba(13,31,77,0.06));
     border: 1px solid var(--pill-border, rgba(13,31,77,0.12));
     color: var(--accent, #0d1f4d);
@@ -175,13 +265,12 @@ main {
     box-sizing: border-box;
 }
 
-/* On small screens stack badge above title for clarity */
 @media (max-width: 520px) {
     .activities-grid .activity-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.35rem;
-        flex-wrap: wrap; /* allow stacking on small screens */
+        flex-wrap: wrap;
     }
 
     .badge {
@@ -195,7 +284,6 @@ main {
     }
 }
 
-/* Slightly larger grid on wide screens for balance */
 @media (min-width: 1100px) {
     .activities-grid {
         grid-template-columns: repeat(3, 1fr);
