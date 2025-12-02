@@ -20,8 +20,6 @@ main {
 }
 
 .activities-grid {
-    /* Keep action buttons side-by-side where space allows (two-column layout)
-       and only stack on very narrow screens. */
     .activity-links {
         gap: 0.5rem;
         align-items: center;
@@ -43,10 +41,8 @@ main {
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: transform 180ms ease, box-shadow 180ms ease;
-    /* allow cards to grow naturally so long descriptions are fully visible */
     min-height: auto;
     overflow: visible;
-    /* allow equal-height columns in the grid while content can still expand */
     flex: 1 1 auto;
 }
 
@@ -104,7 +100,7 @@ main {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .activity-header h3 {
@@ -115,11 +111,8 @@ main {
 }
 
 .activity-header h3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    display: block;
+    overflow: visible;
     word-break: break-word;
     hyphens: auto;
 }
