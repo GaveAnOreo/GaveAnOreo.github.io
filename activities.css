@@ -228,6 +228,38 @@ main {
     text-decoration: none;
 }
 
+.activities .activity-links .secondary-btn {
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid var(--accent-secondary);
+    box-shadow: 0 10px 30px -18px rgba(13, 31, 77, 0.6);
+}
+
+body[data-theme="dark"] .activities .activity-links .secondary-btn {
+    background: linear-gradient(135deg, rgba(74, 105, 217, 0.6), rgba(46, 72, 164, 0.46));
+    border-color: rgba(150, 170, 220, 0.9);
+    box-shadow: 0 14px 32px -18px rgba(2, 6, 18, 0.9);
+}
+
+.activities .activity-links .ghost-btn {
+    background: var(--surface);
+    color: var(--accent);
+    border: 1px solid var(--accent-ring);
+    box-shadow: 0 10px 26px -20px rgba(13, 31, 77, 0.35);
+}
+
+body[data-theme="dark"] .activities .activity-links .ghost-btn {
+    background: rgba(74, 105, 217, 0.14);
+    color: #eaf0ff;
+    border-color: rgba(150, 170, 220, 0.7);
+    box-shadow: 0 10px 26px -18px rgba(2, 6, 18, 0.82);
+}
+
+.activities .activity-links .btn:hover {
+    transform: translateY(-1px);
+    border-color: var(--accent-ring);
+}
+
 .btn.secondary-btn {
     background: transparent;
     border: 1px solid var(--accent-muted);
