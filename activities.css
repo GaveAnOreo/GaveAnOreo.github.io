@@ -8,6 +8,14 @@ main {
     max-width: 640px;
 }
 
+.activities-hero .hero-status {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
 .activities {
     display: grid;
     gap: 2.75rem;

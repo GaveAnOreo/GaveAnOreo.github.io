@@ -68,6 +68,48 @@ const FALLBACK_PROJECTS = [
         pushed_at: '2025-04-10T00:00:00Z',
         isPlaceholder: true,
         isFeatured: true
+    },
+    {
+        name: 'League Gallery',
+        description: 'Interactive League of Legends gallery built for Activity 6, pairing responsive cards with curated champion data.',
+        status: 'Live on GitHub Pages',
+        focus: 'Highlights UI polish, responsive grids, and lightweight animations tuned for fast browsing.',
+        language: 'HTML · CSS · JS',
+        topics: ['Gallery UX', 'Responsive UI', 'Microcopy'],
+        links: [
+            {
+                href: 'https://github.com/GaveAnOreo/League-Gallery',
+                label: 'GitHub repository'
+            },
+            {
+                href: 'https://gaveanoreo.github.io/League-Gallery/',
+                label: 'Live site'
+            }
+        ],
+        pushed_at: '2025-03-18T00:00:00Z',
+        isPlaceholder: true,
+        isFeatured: true
+    },
+    {
+        name: 'League Gallery API',
+        description: 'Documented REST API that feeds the League Gallery client with champion data and structured JSON responses.',
+        status: 'Live documentation',
+        focus: 'Shows how I structure endpoints, write clear docs, and version simple student-friendly APIs.',
+        language: 'HTML · CSS · JS',
+        topics: ['API design', 'Documentation', 'JSON'],
+        links: [
+            {
+                href: 'https://github.com/GaveAnOreo/League-Gallery-API',
+                label: 'GitHub repository'
+            },
+            {
+                href: 'https://gaveanoreo.github.io/League-Gallery-API/',
+                label: 'Live docs'
+            }
+        ],
+        pushed_at: '2025-03-10T00:00:00Z',
+        isPlaceholder: true,
+        isFeatured: true
     }
 ];
 
