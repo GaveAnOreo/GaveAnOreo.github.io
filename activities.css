@@ -219,45 +219,34 @@ main {
     background: transparent;
 }
 
-.activities .activity-links .btn {
+.btn {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.65em 1rem;
-    border-radius: 10px;
+    padding: 0.5em 0.8em;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 600;
-    border: 1px solid var(--accent-ring);
-    box-shadow: 0 12px 32px -22px rgba(13, 31, 77, 0.46);
-    background: linear-gradient(135deg, rgba(13, 31, 77, 0.18), rgba(13, 31, 77, 0.1));
-    color: var(--accent);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border 0.18s ease;
 }
 
-.activities .activity-links .btn.secondary-btn {
-    background: linear-gradient(135deg, rgba(13, 31, 77, 0.22), rgba(13, 31, 77, 0.14));
+.btn.secondary-btn {
+    background: transparent;
+    border: 1px solid var(--accent-muted);
     color: var(--accent);
 }
 
-.activities .activity-links .btn.ghost-btn {
-    background: linear-gradient(135deg, rgba(13, 31, 77, 0.08), rgba(13, 31, 77, 0.04));
-    color: var(--text-primary);
+.btn.ghost-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
 }
 
-.activities .activity-links .btn:hover {
-    transform: translateY(-2px);
-    border-color: var(--accent-ring);
-    box-shadow: 0 16px 40px -20px rgba(13, 31, 77, 0.5);
-}
-
-.activities .activity-links .btn svg {
+.btn svg {
     width: 16px;
     height: 16px;
     flex: 0 0 16px;
 }
 
-.activities .activity-links .btn:focus-visible,
-.activities .activity-links .btn:focus {
+.btn:focus {
     outline: 3px solid var(--accent-ring);
     outline-offset: 2px;
 }

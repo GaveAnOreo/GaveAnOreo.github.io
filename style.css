@@ -658,10 +658,10 @@ body[data-theme="dark"] .primary-btn {
 }
 
 .secondary-btn {
-    background: linear-gradient(135deg, rgba(13, 31, 77, 0.18), rgba(13, 31, 77, 0.1));
+    background: linear-gradient(135deg, rgba(13, 31, 77, 0.12), rgba(13, 31, 77, 0.06));
     color: var(--accent);
     border-color: var(--accent-ring);
-    box-shadow: 0 18px 38px -18px rgba(13, 31, 77, 0.48);
+    box-shadow: 0 16px 36px -22px rgba(13, 31, 77, 0.4);
 }
 
 body[data-theme="dark"] .secondary-btn {
@@ -677,10 +677,10 @@ body[data-theme="dark"] .secondary-btn {
 }
 
 .ghost-btn {
-    background: linear-gradient(135deg, rgba(13, 31, 77, 0.1), rgba(13, 31, 77, 0.04));
+    background: linear-gradient(135deg, rgba(148, 163, 184, 0.12), rgba(148, 163, 184, 0.06));
     color: var(--accent);
-    border-color: var(--accent-ring);
-    box-shadow: 0 12px 28px -20px rgba(13, 31, 77, 0.46);
+    border-color: var(--pill-border);
+    box-shadow: 0 10px 26px -22px rgba(13, 31, 77, 0.42);
 }
 
 body[data-theme="dark"] .ghost-btn {
